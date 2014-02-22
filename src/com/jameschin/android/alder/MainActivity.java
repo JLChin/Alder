@@ -37,7 +37,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 		// Set up the action bar.
 		final ActionBar actionBar = getActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		//actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 		// Create the adapter that will return a fragment for each of the three primary sections of the app.
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -50,7 +50,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
 			@Override
 			public void onPageSelected(int position) {
-				actionBar.setSelectedNavigationItem(position);
+				//actionBar.setSelectedNavigationItem(position);
+				actionBar.getTabAt(position);
 			}
 		});
 
