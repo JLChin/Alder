@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
@@ -142,6 +143,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			View rootView = inflater.inflate(R.layout.fragment_main_dummy, container, false);
 			TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
 			dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+			
+			ImageView testImage = (ImageView) rootView.findViewById(R.id.test_image);
+			testImage.setImageBitmap(ImageManager.decodeSampledBitmapFromResource(getResources(), R.drawable.japanese_garden_wallpaper_hd, 100, 100));
+			
 			return rootView;
 		}
 	}
